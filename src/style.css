@@ -1,0 +1,113 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,100..900&family=Poppins:wght@200;300;400;500;600;700;800;900&display=swap');
+@import "tailwindcss";
+
+:root {
+  font-family: "Poppins", serif;
+}
+
+@theme{
+  --color-darkBlue: #081e2c;
+  --drop-shadow-3xl: 0 30px 60px #00a3ff;
+  --drop-shadow-4xl: 0 0px 10px #00a3ff;
+}
+
+@theme{
+  --color-lightBlue: #38bdf8;
+}
+
+@theme {
+  --breakpoint-xs: 23.438rem;
+  --breakpoint-llg: 81.25rem;
+}
+
+@theme {
+  --tracking-1: 0em;
+  --tracking-2: 0.025em;
+  --tracking-3: 0.05em;
+  --tracking-4: 0.1em;
+}
+
+@layer components{
+  .top-btn {
+    @apply fixed bottom-5 right-5 bg-blue-500 text-white p-2.5 rounded-full cursor-pointer hidden transition-colors duration-300;
+  }
+  .top-btn:hover{
+    @apply bg-blue-600;
+  }
+  .show-btn{
+    @apply block;
+  }
+}
+
+@layer utilities{
+  @keyframes zoom-in-out{
+    0%{
+      transform: scale(0.8) rotate(-30deg);
+      opacity: 0;
+    }
+    50%{
+      transform: scale(1.1) rotate(0deg);
+      opacity: 1;
+    }
+    100%{
+      transform: scale(1.05) rotate(0deg);
+    }
+  }
+  .animate-zoom-in-out{
+    animation: zoom-in-out 2s ease-in-out forwards;
+  }
+}
+
+@layer utilities{
+  @keyframes slide-in{
+    0%{
+      opacity: 0;
+      transform: translateX(-50px);
+    }
+    100%{
+      opacity: 1;
+      transform: translateX(0);
+    }
+  }
+  .animate-slide-in{
+    animation: slide-in 1s ease-in-out forwards;
+  }
+}
+
+@layer utilities {
+  @keyframes slideDownUp {
+    0% {
+      transform: translateY(50px);
+      opacity: 0;
+    }
+    100% {
+      transform: translateY(0px);
+      opacity: 1;
+    }
+  }
+
+  .animate-slide-down-up {
+    animation: slideDownUp 1s ease-in-out forwards;
+  }
+}
+
+@layer utilities {
+  .scrollbar::-webkit-scrollbar {
+    width: 3px;
+    height: 3px;
+  }
+
+  .scrollbar::-webkit-scrollbar-track {
+    border-radius: 100vh;
+    background: #CBD2F4;
+  }
+
+  .scrollbar::-webkit-scrollbar-thumb {
+    background: #3E58A9;
+    border-radius: 100vh;
+  }
+
+  .scrollbar::-webkit-scrollbar-thumb:hover {
+    background: #4867c2;
+  }
+}
