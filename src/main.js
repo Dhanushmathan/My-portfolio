@@ -1,5 +1,6 @@
 import Typed from 'typed.js';
 
+const contactUs = document.getElementById("contactMe");
 const homeSec = document.getElementById("home");
 const aboutSec = document.getElementById("about");
 const skillSec = document.getElementById("skill");
@@ -9,6 +10,12 @@ const roleEl = document.getElementById("role");
 const form = document.querySelector("form");
 const yearEl = document.getElementById("year");
 const topButton = document.getElementById("topBtn");
+
+contactUs.addEventListener('click', () => {
+    document.getElementById("contactSec").scrollIntoView({
+        behavior: 'smooth'
+    });
+})
 
 homeSec.addEventListener('click', () => {
     document.getElementById("homeSec").scrollIntoView({
