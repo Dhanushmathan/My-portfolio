@@ -49,7 +49,7 @@ contactSec.addEventListener('click', () => {
 
 // role content
 var typed = new Typed(roleEl, {
-    strings: ["Frontend Developer", "Web Developer", "UI/UX Designer"],
+    strings: ["Full Stack Developer", "Frontend Developer", "Web Developer"],
     typeSpeed: 150,
     backSpeed: 150,
     backDelay: 1000,
